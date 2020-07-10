@@ -1,0 +1,53 @@
+// Display
+
+.db {
+	display: block;
+}
+
+.df {
+	display: flex;
+}
+
+.dfi {
+	display: inline-flex;
+}
+
+.di {
+	display: inline;
+}
+
+.dib {
+	display: inline-block;
+}
+
+.dn {
+	display: none;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:db {
+			display: block;
+		}
+
+		.#{$sel}\:df {
+			display: flex;
+		}
+
+		.#{$sel}\:dfi {
+			display: inline-flex;
+		}
+
+		.#{$sel}\:di {
+			display: inline;
+		}
+
+		.#{$sel}\:dib {
+			display: inline-block;
+		}
+
+		.#{$sel}\:dn {
+			display: none;
+		}
+	}
+}

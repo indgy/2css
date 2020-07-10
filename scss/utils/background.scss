@@ -1,0 +1,255 @@
+// Background
+
+.bg-fix {
+	background-attachment: fixed;
+}
+
+.bg-loc {
+	background-attachment: local;
+}
+
+.bg-scr {
+	background-attachment: scroll;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:bg-fix {
+			background-attachment: fixed;
+		}
+
+		.#{$sel}\:bg-loc {
+			background-attachment: local;
+		}
+
+		.#{$sel}\:bg-scr {
+			background-attachment: scroll;
+		}
+	}
+}
+
+.bg-c {
+	background-position: center center;
+}
+
+.bg-t {
+	background-position: center top;
+}
+
+.bg-tr {
+	background-position: top right;
+}
+
+.bg-r {
+	background-position: center right;
+}
+
+.bg-br {
+	background-position: bottom right;
+}
+
+.bg-b {
+	background-position: center bottom;
+}
+
+.bg-bl {
+	background-position: bottom left;
+}
+
+.bg-l {
+	background-position: center left;
+}
+
+.bg-tl {
+	background-position: top left;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:bg-c {
+			background-position: center center;
+		}
+
+		.#{$sel}\:bg-t {
+			background-position: center top;
+		}
+
+		.#{$sel}\:bg-tr {
+			background-position: top right;
+		}
+
+		.#{$sel}\:bg-r {
+			background-position: center right;
+		}
+
+		.#{$sel}\:bg-br {
+			background-position: bottom right;
+		}
+
+		.#{$sel}\:bg-b {
+			background-position: center bottom;
+		}
+
+		.#{$sel}\:bg-bl {
+			background-position: bottom left;
+		}
+
+		.#{$sel}\:bg-l {
+			background-position: center left;
+		}
+
+		.#{$sel}\:bg-tl {
+			background-position: top left;
+		}
+	}
+}
+
+.bg-rp {
+	background-repeat: repeat;
+}
+
+.bg-rx {
+	background-repeat: repeat-x;
+}
+
+.bg-ry {
+	background-repeat: repeat-y;
+}
+
+.bg-rn {
+	background-repeat: no-repeat;
+}
+
+.bg-nr {
+	background-repeat: no-repeat;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:bg-rp {
+			background-repeat: repeat;
+		}
+
+		.#{$sel}\:bg-rx {
+			background-repeat: repeat-x;
+		}
+
+		.#{$sel}\:bg-ry {
+			background-repeat: repeat-y;
+		}
+
+		.#{$sel}\:bg-rn {
+			background-repeat: no-repeat;
+		}
+
+		.#{$sel}\:bg-nr {
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.bg-auto {
+	background-size: auto;
+}
+
+.bg-cov {
+	background-size: cover;
+}
+
+.bg-con {
+	background-size: contain;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:bg-auto {
+			background-size: auto;
+		}
+
+		.#{$sel}\:bg-cov {
+			background-size: cover;
+		}
+
+		.#{$sel}\:bg-con {
+			background-size: contain;
+		}
+	}
+}
+
+// Alpha colours (base-up)
+@each $name, $color in $colors {
+	.bg-#{$name}, .bg-#{$name}-0 {
+		color:rgba($color, 1);
+	}
+
+	@each $i, $opacity in $alpha-scale {
+		.bg-#{$name}-#{$i} {
+			background-color: rgba($color, $opacity);;
+		}
+	}
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+// Alpha colours (responsive)
+@each $name, $color in $colors {
+	.bg-#{$name}, .bg-#{$name}-0 {
+		background-color:rgba($color, 1);
+	}
+
+	@each $i, $opacity in $alpha-scale {
+				.#{$sel}\:bg-#{$name}-#{$i} {
+				background-color: rgba($color, $opacity);;
+			}
+		}
+	}
+	}
+}
+
+// Lighten solid colours (base-up)
+@each $name, $color in $colors {
+	@each $i, $percent in $color-scale {
+		.bg-#{$name}-#{$i} {
+			background-color: lighten(rgba($color, 1), $percent);
+		}
+	}
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		// Lighten colours (responsive)
+		@each $name, $color in $colors {
+	.bg-#{$name}, .bg-#{$name}-0 {
+		background-color:rgba($color, 1);
+	}
+
+		@each $i, $percent in $color-scale {
+				.#{$sel}\:bg-#{$name}-#{$i} {
+				background-color: lighten(rgba($color, 1), $percent);
+			}
+		}
+	}
+	}
+}
+
+// Darken solid colours (base-up)
+@each $name, $color in $colors {
+	@each $i, $percent in $color-scale {
+		.-bg-#{$name}-#{$i} {
+			background-color: darken(rgba($color, 1), $percent);
+		}
+	}
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		// Darken colours (responsive)
+		@each $name, $color in $colors {
+			@each $i, $percent in $color-scale {
+				.#{$sel}\:-bg-#{$name}-#{$i} {
+				background-color: darken(rgba($color, 1), $percent);
+			}
+		}
+	}
+	}
+}

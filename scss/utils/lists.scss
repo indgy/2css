@@ -1,0 +1,61 @@
+// Lists
+
+.ls-i {
+	list-style: inline;
+}
+
+.ls-n {
+	list-style: none;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:ls-i {
+			list-style: inline;
+		}
+
+		.#{$sel}\:ls-n {
+			list-style: none;
+		}
+	}
+}
+
+.lst-c {
+	list-style-type: circle;
+}
+
+.lst-d {
+	list-style-type: disc;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:lst-c {
+			list-style-type: circle;
+		}
+
+		.#{$sel}\:lst-d {
+			list-style-type: disc;
+		}
+	}
+}
+
+.lsp-i {
+	list-style-position: inside;
+}
+
+.lsp-o {
+	list-style-position: outside;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:lsp-i {
+			list-style-position: inside;
+		}
+
+		.#{$sel}\:lsp-o {
+			list-style-position: outside;
+		}
+	}
+}

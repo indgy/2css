@@ -1,0 +1,477 @@
+// Flexbox
+
+.fb {
+	display: flex;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb {
+			display: flex;
+		}
+	}
+}
+
+.fb-a {
+	flex: 1 1 auto;
+}
+
+.fb-i {
+	flex: 0 1 auto;
+}
+
+.fb-1 {
+	flex: 1 1 0%;
+}
+
+.fb-n {
+	flex: none;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-a {
+			flex: 1 1 auto;
+		}
+
+		.#{$sel}\:fb-i {
+			flex: 0 1 auto;
+		}
+
+		.#{$sel}\:fb-1 {
+			flex: 1 1 0%;
+		}
+
+		.#{$sel}\:fb-n {
+			flex: none;
+		}
+	}
+}
+
+.fb-ai-s {
+	align-items: flex-start;
+}
+
+.fb-ai-e {
+	align-items: flex-end;
+}
+
+.fb-ai-c {
+	align-items: center;
+}
+
+.fb-ai-b {
+	align-items: baseline;
+}
+
+.fb-ai-r {
+	align-items: stretch;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-ai-s {
+			align-items: flex-start;
+		}
+
+		.#{$sel}\:fb-ai-e {
+			align-items: flex-end;
+		}
+
+		.#{$sel}\:fb-ai-c {
+			align-items: center;
+		}
+
+		.#{$sel}\:fb-ai-b {
+			align-items: baseline;
+		}
+
+		.#{$sel}\:fb-ai-r {
+			align-items: stretch;
+		}
+	}
+}
+
+.fb-as-s {
+	align-self: flex-start;
+}
+
+.fb-as-e {
+	align-self: flex-end;
+}
+
+.fb-as-c {
+	align-self: center;
+}
+
+.fb-as-b {
+	align-self: baseline;
+}
+
+.fb-as-r {
+	align-self: stretch;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-as-s {
+			align-self: flex-start;
+		}
+
+		.#{$sel}\:fb-as-e {
+			align-self: flex-end;
+		}
+
+		.#{$sel}\:fb-as-c {
+			align-self: center;
+		}
+
+		.#{$sel}\:fb-as-b {
+			align-self: baseline;
+		}
+
+		.#{$sel}\:fb-as-r {
+			align-self: stretch;
+		}
+	}
+}
+
+.fb-ac-s {
+	align-content: flex-start;
+}
+
+.fb-ac-e {
+	align-content: flex-end;
+}
+
+.fb-ac-c {
+	align-content: center;
+}
+
+.fb-ac-b {
+	align-content: space-between;
+}
+
+.fb-ac-a {
+	align-content: space-around;
+}
+
+.fb-ac-r {
+	align-content: stretch;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-ac-s {
+			align-content: flex-start;
+		}
+
+		.#{$sel}\:fb-ac-e {
+			align-content: flex-end;
+		}
+
+		.#{$sel}\:fb-ac-c {
+			align-content: center;
+		}
+
+		.#{$sel}\:fb-ac-b {
+			align-content: space-between;
+		}
+
+		.#{$sel}\:fb-ac-a {
+			align-content: space-around;
+		}
+
+		.#{$sel}\:fb-ac-r {
+			align-content: stretch;
+		}
+	}
+}
+
+.fb-jc-s {
+	justify-content: flex-start;
+}
+
+.fb-jc-e {
+	justify-content: flex-end;
+}
+
+.fb-jc-c {
+	justify-content: center;
+}
+
+.fb-jc-b {
+	justify-content: space-between;
+}
+
+.fb-jc-a {
+	justify-content: space-around;
+}
+
+.fb-jc-v {
+	justify-content: space-evenly;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-jc-s {
+			justify-content: flex-start;
+		}
+
+		.#{$sel}\:fb-jc-e {
+			justify-content: flex-end;
+		}
+
+		.#{$sel}\:fb-jc-c {
+			justify-content: center;
+		}
+
+		.#{$sel}\:fb-jc-b {
+			justify-content: space-between;
+		}
+
+		.#{$sel}\:fb-jc-a {
+			justify-content: space-around;
+		}
+
+		.#{$sel}\:fb-jc-v {
+			justify-content: space-evenly;
+		}
+	}
+}
+
+.fb-c {
+	flex-direction: column;
+}
+
+.fb-cr {
+	flex-direction: column-reverse;
+}
+
+.fb-r {
+	flex-direction: row;
+}
+
+.fb-rr {
+	flex-direction: row-reverse;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-c {
+			flex-direction: column;
+		}
+
+		.#{$sel}\:fb-cr {
+			flex-direction: column-reverse;
+		}
+
+		.#{$sel}\:fb-r {
+			flex-direction: row;
+		}
+
+		.#{$sel}\:fb-rr {
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+.fb-g-0 {
+	flex-grow: 0;
+}
+
+.fb-g-1 {
+	flex-grow: 1;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-g-0 {
+			flex-grow: 0;
+		}
+
+		.#{$sel}\:fb-g-1 {
+			flex-grow: 1;
+		}
+	}
+}
+
+.fb-s-0 {
+	flex-shrink: 0;
+}
+
+.fb-s-1 {
+	flex-shrink: 1;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-s-0 {
+			flex-shrink: 0;
+		}
+
+		.#{$sel}\:fb-s-1 {
+			flex-shrink: 1;
+		}
+	}
+}
+
+.fb-n {
+	flex-wrap: nowrap;
+}
+
+.fb-w {
+	flex-wrap: wrap;
+}
+
+.fb-wr {
+	flex-wrap: wrap-reverse;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-n {
+			flex-wrap: nowrap;
+		}
+
+		.#{$sel}\:fb-w {
+			flex-wrap: wrap;
+		}
+
+		.#{$sel}\:fb-wr {
+			flex-wrap: wrap-reverse;
+		}
+	}
+}
+
+.fb-o-f {
+	order: -9999;
+}
+
+.fb-o-l {
+	order: 99999;
+}
+
+.fb-o-n {
+	order: 0;
+}
+
+.fb-o-0 {
+	order: 0;
+}
+
+.fb-o-1 {
+	order: 1;
+}
+
+.fb-o-2 {
+	order: 2;
+}
+
+.fb-o-3 {
+	order: 3;
+}
+
+.fb-o-4 {
+	order: 4;
+}
+
+.fb-o-5 {
+	order: 5;
+}
+
+.fb-o-6 {
+	order: 6;
+}
+
+.fb-o-7 {
+	order: 7;
+}
+
+.fb-o-8 {
+	order: 8;
+}
+
+.fb-o-9 {
+	order: 9;
+}
+
+.fb-o-10 {
+	order: 10;
+}
+
+.fb-o-11 {
+	order: 11;
+}
+
+.fb-o-12 {
+	order: 12;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fb-o-f {
+			order: -9999;
+		}
+
+		.#{$sel}\:fb-o-l {
+			order: 99999;
+		}
+
+		.#{$sel}\:fb-o-n {
+			order: 0;
+		}
+
+		.#{$sel}\:fb-o-0 {
+			order: 0;
+		}
+
+		.#{$sel}\:fb-o-1 {
+			order: 1;
+		}
+
+		.#{$sel}\:fb-o-2 {
+			order: 2;
+		}
+
+		.#{$sel}\:fb-o-3 {
+			order: 3;
+		}
+
+		.#{$sel}\:fb-o-4 {
+			order: 4;
+		}
+
+		.#{$sel}\:fb-o-5 {
+			order: 5;
+		}
+
+		.#{$sel}\:fb-o-6 {
+			order: 6;
+		}
+
+		.#{$sel}\:fb-o-7 {
+			order: 7;
+		}
+
+		.#{$sel}\:fb-o-8 {
+			order: 8;
+		}
+
+		.#{$sel}\:fb-o-9 {
+			order: 9;
+		}
+
+		.#{$sel}\:fb-o-10 {
+			order: 10;
+		}
+
+		.#{$sel}\:fb-o-11 {
+			order: 11;
+		}
+
+		.#{$sel}\:fb-o-12 {
+			order: 12;
+		}
+	}
+}

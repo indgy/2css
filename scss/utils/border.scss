@@ -1,0 +1,67 @@
+// Borders
+
+@each $i, $measure in $px-scale {
+		.br-#{$i} {
+			border-style: solid;
+			border-width: #{$measure}px;
+		}
+	}
+
+@each $i, $measure in $px-scale {
+		.br-t-#{$i} {
+			border-top-style: solid;
+			border-top-width: #{$measure}px;
+		}
+
+		.br-r-#{$i} {
+			border-right-style: solid;
+			border-right-width: #{$measure}px;
+		}
+
+		.br-b-#{$i} {
+			border-bottom-style: solid;
+			border-bottom-width: #{$measure}px;
+		}
+
+		.br-l-#{$i} {
+			border-left-style: solid;
+			border-left-width: #{$measure}px;
+		}
+	}
+
+@each $i, $measure in $rhythm-scale {
+		.rd-#{$i} {
+			border-radius: #{$measure}rem;
+		}
+	}
+
+@each $i, $measure in $rhythm-scale {
+		.rd-t-#{$i} {
+			border-top-radius: #{$measure}rem;
+		}
+
+		.rd-r-#{$i} {
+			border-right-radius: #{$measure}rem;
+		}
+
+		.rd-b-#{$i} {
+			border-bottom-radius: #{$measure}rem;
+		}
+
+		.rd-l-#{$i} {
+			border-left-radius: #{$measure}rem;
+		}
+	}
+
+// Alpha colours (base-up)
+@each $name, $color in $colors {
+	.fc-#{$name}, .fc-#{$name}-0 {
+		color:rgba($color, 1);
+	}
+
+	@each $i, $opacity in $alpha-scale {
+		.br-#{$name}-#{$i} {
+			border-color: rgba($color, $opacity);;
+		}
+	}
+}

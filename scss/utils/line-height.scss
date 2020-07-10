@@ -1,0 +1,33 @@
+// Line height
+
+@each $i, $measure in $small-scale {
+		.lh-#{$i} {
+			line-height: #{$measure}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $small-scale {
+				.#{$sel}\:lh-#{$i} {
+				line-height: #{$measure}rem;
+			}
+		}
+	}
+}
+
+@each $i, $measure in $small-scale {
+		.-lh-#{$i} {
+			line-height: #{$measure}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $small-scale {
+				.#{$sel}\:-lh-#{$i} {
+				line-height: #{$measure}rem;
+			}
+		}
+	}
+}

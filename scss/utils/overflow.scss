@@ -1,0 +1,109 @@
+// Overflow
+
+.of-a {
+	overflow: auto;
+}
+
+.of-h {
+	overflow: hidden;
+}
+
+.of-s {
+	overflow: scroll;
+}
+
+.of-v {
+	overflow: visible;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:of-a {
+			overflow: auto;
+		}
+
+		.#{$sel}\:of-h {
+			overflow: hidden;
+		}
+
+		.#{$sel}\:of-s {
+			overflow: scroll;
+		}
+
+		.#{$sel}\:of-v {
+			overflow: visible;
+		}
+	}
+}
+
+.ofx-a {
+	overflow-x: auto;
+}
+
+.ofx-h {
+	overflow-x: hidden;
+}
+
+.ofx-s {
+	overflow-x: scroll;
+}
+
+.ofx-v {
+	overflow-x: visible;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:ofx-a {
+			overflow-x: auto;
+		}
+
+		.#{$sel}\:ofx-h {
+			overflow-x: hidden;
+		}
+
+		.#{$sel}\:ofx-s {
+			overflow-x: scroll;
+		}
+
+		.#{$sel}\:ofx-v {
+			overflow-x: visible;
+		}
+	}
+}
+
+.ofy-a {
+	overflow-y: auto;
+}
+
+.ofy-h {
+	overflow-y: hidden;
+}
+
+.ofy-s {
+	overflow-y: scroll;
+}
+
+.ofy-v {
+	overflow-y: visible;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:ofy-a {
+			overflow-y: auto;
+		}
+
+		.#{$sel}\:ofy-h {
+			overflow-y: hidden;
+		}
+
+		.#{$sel}\:ofy-s {
+			overflow-y: scroll;
+		}
+
+		.#{$sel}\:ofy-v {
+			overflow-y: visible;
+		}
+	}
+}

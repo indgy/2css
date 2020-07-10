@@ -1,0 +1,29 @@
+// Vertical align
+
+.va-b {
+	vertical-align: bottom;
+}
+
+.va-t {
+	vertical-align: top;
+}
+
+.va-m {
+	vertical-align: middle;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:va-b {
+			vertical-align: bottom;
+		}
+
+		.#{$sel}\:va-t {
+			vertical-align: top;
+		}
+
+		.#{$sel}\:va-m {
+			vertical-align: middle;
+		}
+	}
+}

@@ -1,0 +1,175 @@
+// Fonts
+
+// Lighten solid colours (base-up)
+@each $name, $color in $colors {
+	@each $i, $percent in $color-scale {
+		.fc-#{$name}-#{$i} {
+			color: lighten(rgba($color, 1), $percent);
+		}
+	}
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		// Lighten colours (responsive)
+		@each $name, $color in $colors {
+	.fc-#{$name}, .fc-#{$name}-0 {
+		color:rgba($color, 1);
+	}
+
+		@each $i, $percent in $color-scale {
+				.#{$sel}\:fc-#{$name}-#{$i} {
+				color: lighten(rgba($color, 1), $percent);
+			}
+		}
+	}
+	}
+}
+
+// Darken solid colours (base-up)
+@each $name, $color in $colors {
+	@each $i, $percent in $color-scale {
+		.-fc-#{$name}-#{$i} {
+			color: darken(rgba($color, 1), $percent);
+		}
+	}
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		// Darken colours (responsive)
+		@each $name, $color in $colors {
+			@each $i, $percent in $color-scale {
+				.#{$sel}\:-fc-#{$name}-#{$i} {
+				color: darken(rgba($color, 1), $percent);
+			}
+		}
+	}
+	}
+}
+
+// Alpha colours (base-up)
+@each $name, $color in $colors {
+	.fc-#{$name}, .fc-#{$name}-0 {
+		color:rgba($color, 1);
+	}
+
+	@each $i, $opacity in $alpha-scale {
+		.fc-#{$name}-#{$i} {
+			color: rgba($color, $opacity);
+		}
+	}
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+// Alpha colours (responsive)
+@each $name, $color in $colors {
+	.fc-#{$name}, .fc-#{$name}-0 {
+		color:rgba($color, 1);
+	}
+
+	@each $i, $opacity in $alpha-scale {
+				.#{$sel}\:fc-#{$name}-#{$i} {
+				color: rgba($color, $opacity);
+			}
+		}
+	}
+	}
+}
+
+.ff-sans {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+}
+
+.ff-serif {
+	font-family: Palatino, Georgia, "Lucida Bright", "Book Antiqua", "Times New Roman", Times, serif;;
+}
+
+.ff-mono {
+	font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:ff-sans {
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+		}
+
+		.#{$sel}\:ff-serif {
+			font-family: Palatino, Georgia, "Lucida Bright", "Book Antiqua", "Times New Roman", Times, serif;;
+		}
+
+		.#{$sel}\:ff-mono {
+			font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;;
+		}
+	}
+}
+
+@for $i from 1 through 9 {.fs-0 { font-size: 1rem; }
+		.fs-#{$i} {
+			font-size: #{1 * math.pow($type-scale, $i)}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@for $i from 1 through 9 {.fs-0 { font-size: 1rem; }
+				.#{$sel}\:fs-#{$i} {
+				font-size: #{1 * math.pow($type-scale, $i)}rem;
+			}
+		}
+	}
+}
+
+@for $i from 3 through 1 {.fs-0 { font-size: 1rem; }
+		.-fs-#{$i} {
+			font-size: #{1 / math.pow($type-scale, $i)}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@for $i from 3 through 1 {.fs-0 { font-size: 1rem; }
+				.#{$sel}\:-fs-#{$i} {
+				font-size: #{1 / math.pow($type-scale, $i)}rem;
+			}
+		}
+	}
+}
+
+.fs-i {
+	font-style: italic;
+}
+
+.fs-n {
+	font-style: normal;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fs-i {
+			font-style: italic;
+		}
+
+		.#{$sel}\:fs-n {
+			font-style: normal;
+		}
+	}
+}
+
+@each $i, $weight in $weights-scale {
+		.fw-#{$i} {
+			font-weight: #{$weight};
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $weight in $weights-scale {
+				.#{$sel}\:fw-#{$i} {
+				font-weight: #{$weight};
+			}
+		}
+	}
+}

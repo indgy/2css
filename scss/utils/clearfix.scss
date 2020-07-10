@@ -1,0 +1,26 @@
+.cf:before,.cf:after {
+    content:" ";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+.cf {
+    *zoom:1;
+}
+
+// breakpoints
+@each $sel, $size in $breakpoints {
+    @media(min-width: #{$size}) {
+        .#{$sel}\:cf:before,.#{$sel}\:cf:after {
+            content:" ";
+            display:table;
+        }
+        .#{$sel}\:cf:after {
+            clear:both;
+        }
+        .#{$sel}\:cf {
+            *zoom:1;
+        }
+    }
+}

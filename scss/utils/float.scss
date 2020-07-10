@@ -1,0 +1,29 @@
+// Float
+
+.fl-l {
+	float: left;
+}
+
+.fl-r {
+	float: right;
+}
+
+.fl-n {
+	float: none;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fl-l {
+			float: left;
+		}
+
+		.#{$sel}\:fl-r {
+			float: right;
+		}
+
+		.#{$sel}\:fl-n {
+			float: none;
+		}
+	}
+}

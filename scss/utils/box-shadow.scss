@@ -1,0 +1,33 @@
+// Box Shadow
+
+@each $i, $measure in $small-scale {
+		.bs-#{$i} {
+			box-shadow: #{$measure};
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $small-scale {
+				.#{$sel}\:bs-#{$i} {
+				box-shadow: #{$measure};
+			}
+		}
+	}
+}
+
+@each $i, $measure in $small-scale {
+		.-bs-#{$i} {
+			box-shadow: -#{$measure};
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $small-scale {
+				.#{$sel}\:-bs-#{$i} {
+				box-shadow: -#{$measure};
+			}
+		}
+	}
+}

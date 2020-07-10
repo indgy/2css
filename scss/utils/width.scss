@@ -1,0 +1,145 @@
+// Width
+
+@each $i, $percent in $percent-scale {
+		.w-#{$i} {
+			width: #{$percent}#{'%'};
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $percent in $percent-scale {
+				.#{$sel}\:w-#{$i} {
+				width: #{$percent}#{'%'};
+			}
+		}
+	}
+}
+
+@each $i, $percent in $percent-scale {
+		.mx-w-#{$i} {
+			max-width: #{$percent}#{'%'};
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $percent in $percent-scale {
+				.#{$sel}\:mx-w-#{$i} {
+				max-width: #{$percent}#{'%'};
+			}
+		}
+	}
+}
+
+@each $i, $percent in $percent-scale {
+		.mn-w-#{$i} {
+			min-width: #{$percent}#{'%'};
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $percent in $percent-scale {
+				.#{$sel}\:mn-w-#{$i} {
+				min-width: #{$percent}#{'%'};
+			}
+		}
+	}
+}
+
+@each $i, $measure in $rhythm-scale {
+		.w-#{$i} {
+			width: #{$measure}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $rhythm-scale {
+				.#{$sel}\:w-#{$i} {
+				width: #{$measure}rem;
+			}
+		}
+	}
+}
+
+@each $i, $measure in $rhythm-scale {
+		.mx-w-#{$i} {
+			max-width: #{$measure}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $rhythm-scale {
+				.#{$sel}\:mx-w-#{$i} {
+				max-width: #{$measure}rem;
+			}
+		}
+	}
+}
+
+@each $i, $measure in $rhythm-scale {
+		.mn-w-#{$i} {
+			min-width: #{$measure}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $rhythm-scale {
+				.#{$sel}\:mn-w-#{$i} {
+				min-width: #{$measure}rem;
+			}
+		}
+	}
+}
+
+@each $i, $measure in $viewport-scale {
+		.wv-#{$i} {
+			width: #{$measure}vh;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $viewport-scale {
+				.#{$sel}\:wv-#{$i} {
+				width: #{$measure}vh;
+			}
+		}
+	}
+}
+
+@each $i, $measure in $viewport-scale {
+		.mx-wv-#{$i} {
+			max-width: #{$measure}vh;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $viewport-scale {
+				.#{$sel}\:mx-wv-#{$i} {
+				max-width: #{$measure}vh;
+			}
+		}
+	}
+}
+
+@each $i, $measure in $viewport-scale {
+		.mn-wv-#{$i} {
+			min-width: #{$measure}vh;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $viewport-scale {
+				.#{$sel}\:mn-wv-#{$i} {
+				min-width: #{$measure}vh;
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+// Letter spacing
+
+@each $i, $measure in $small-scale {
+		.ls-#{$i} {
+			letter-spacing: #{$measure}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $small-scale {
+				.#{$sel}\:ls-#{$i} {
+				letter-spacing: #{$measure}rem;
+			}
+		}
+	}
+}
+
+@each $i, $measure in $small-scale {
+		.-ls-#{$i} {
+			letter-spacing: -#{$measure}rem;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $small-scale {
+				.#{$sel}\:-ls-#{$i} {
+				letter-spacing: -#{$measure}rem;
+			}
+		}
+	}
+}

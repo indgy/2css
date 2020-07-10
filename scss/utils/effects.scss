@@ -1,0 +1,289 @@
+// Effects
+
+.fx {
+	transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fx {
+			transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform
+		}
+	}
+}
+
+.fx-r {
+	transform-translate-x: 0;
+	transform-translate-y: 0;
+	transform-rotate: 0;
+	transform-skew-x: 0;
+	transform-skew-y: 0;
+	transform-scale-x: 1;
+	transform-scale-y: 1;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fx-r {
+			transform-translate-x: 0;
+			transform-translate-y: 0;
+			transform-rotate: 0;
+			transform-skew-x: 0;
+			transform-skew-y: 0;
+			transform-scale-x: 1;
+			transform-scale-y: 1;
+		}
+	}
+}
+
+.fx-c {
+	transition-property: background-color,border-color,color,fill,stroke
+}
+
+.fx-o {
+	transition-property: opacity
+}
+
+.fx-s {
+	transition-property: shadow
+}
+
+.fx-t {
+	transition-property: transform
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fx-c {
+			transition-property: background-color,border-color,color,fill,stroke
+		}
+
+		.#{$sel}\:fx-o {
+			transition-property: opacity
+		}
+
+		.#{$sel}\:fx-s {
+			transition-property: shadow
+		}
+
+		.#{$sel}\:fx-t {
+			transition-property: transform
+		}
+	}
+}
+
+@each $i, $measure in $rhythm-scale {
+		.fx-mv-x-#{$i} {
+			transform: translateX(#{$measure});
+		}
+
+		.fx-mv-y-#{$i} {
+			transform: translateY(#{$measure});
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $measure in $rhythm-scale {
+				.#{$sel}\:fx-mv-x-#{$i} {
+				transform: translateX(#{$measure});
+			}
+
+				.#{$sel}\:fx-mv-y-#{$i} {
+				transform: translateY(#{$measure});
+			}
+		}
+	}
+}
+
+@each $i, $scale in $transform-scale {
+		.fx-sc-#{$i} {
+			transform: scale(#{$scale}, #{$scale});
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $scale in $transform-scale {
+				.#{$sel}\:fx-sc-#{$i} {
+				transform: scale(#{$scale}, #{$scale});
+			}
+		}
+	}
+}
+
+@each $i, $angle in $degrees-scale {
+		.fx-rt-#{$i} {
+			transform: rotate(#{$angle}deg);
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $angle in $degrees-scale {
+				.#{$sel}\:fx-rt-#{$i} {
+				transform: rotate(#{$angle}deg);
+			}
+		}
+	}
+}
+
+@each $i, $angle in $degrees-scale {
+		.-fx-rt-#{$i} {
+			transform: rotate(-#{$angle}deg);
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $angle in $degrees-scale {
+				.#{$sel}\:-fx-rt-#{$i} {
+				transform: rotate(-#{$angle}deg);
+			}
+		}
+	}
+}
+
+.fx-o-c {
+	transform-origin: center;
+}
+
+.fx-o-t {
+	transform-origin: top;
+}
+
+.fx-o-tr {
+	transform-origin: top right;
+}
+
+.fx-o-r {
+	transform-origin: right;
+}
+
+.fx-o-br {
+	transform-origin: bottom right;
+}
+
+.fx-o-b {
+	transform-origin: bottom;
+}
+
+.fx-o-bl {
+	transform-origin: bottom left;
+}
+
+.fx-o-l {
+	transform-origin: left;
+}
+
+.fx-o-tl {
+	transform-origin: top left;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fx-o-c {
+			transform-origin: center;
+		}
+
+		.#{$sel}\:fx-o-t {
+			transform-origin: top;
+		}
+
+		.#{$sel}\:fx-o-tr {
+			transform-origin: top right;
+		}
+
+		.#{$sel}\:fx-o-r {
+			transform-origin: right;
+		}
+
+		.#{$sel}\:fx-o-br {
+			transform-origin: bottom right;
+		}
+
+		.#{$sel}\:fx-o-b {
+			transform-origin: bottom;
+		}
+
+		.#{$sel}\:fx-o-bl {
+			transform-origin: bottom left;
+		}
+
+		.#{$sel}\:fx-o-l {
+			transform-origin: left;
+		}
+
+		.#{$sel}\:fx-o-tl {
+			transform-origin: top left;
+		}
+	}
+}
+
+@each $i, $duration in $duration-scale {
+		.fx-dt-#{$i} {
+			transition-duration: #{$duration}ms;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $duration in $duration-scale {
+				.#{$sel}\:fx-dt-#{$i} {
+				transition-duration: #{$duration}ms;
+			}
+		}
+	}
+}
+
+@each $i, $duration in $duration-scale {
+		.fx-dd-#{$i} {
+			transition-delay: #{$duration}ms;
+		}
+	}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+@each $i, $duration in $duration-scale {
+				.#{$sel}\:fx-dd-#{$i} {
+				transition-delay: #{$duration}ms;
+			}
+		}
+	}
+}
+
+.fx-el {
+	transition-timing-function: linear;
+}
+
+.fx-ei {
+	transition-timing-function: cubic-bezier(.4,0,1,1);
+}
+
+.fx-eo {
+	transition-timing-function: cubic-bezier(0,0,.2,1);
+}
+
+.fx-eio {
+	transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:fx-el {
+			transition-timing-function: linear;
+		}
+
+		.#{$sel}\:fx-ei {
+			transition-timing-function: cubic-bezier(.4,0,1,1);
+		}
+
+		.#{$sel}\:fx-eo {
+			transition-timing-function: cubic-bezier(0,0,.2,1);
+		}
+
+		.#{$sel}\:fx-eio {
+			transition-timing-function: cubic-bezier(.4,0,.2,1);
+		}
+	}
+}

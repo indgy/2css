@@ -1,0 +1,37 @@
+// Values are in percentages
+// Colours will be lightened or darkend by the selected percentage
+// e.g.
+//  fc-red-6 - lighter red 33%
+//  -fc-red-6 - darker red 33%
+$color-scale:
+(
+    "1": 5.5,
+    "2": 11,
+    "3": 16.5,
+    "4": 22,
+    "5": 27.5,
+    "6": 33,
+    "7": 38.5,
+    "8": 44,
+    "9": 50,
+);
+
+// e.g.
+//  fc-red-02 - red with 2% alpha
+//  fc-red-50 - red with 50% alpha
+$alpha-scale:
+(
+    "100": 1,
+    "90":  0.9,
+    "80":  0.8,
+    "70":  0.7,
+    "60":  0.6,
+    "50":  0.5,
+    "40":  0.4,
+    "30":  0.3,
+    "20":  0.2,
+    "10":  0.1,
+    "05":  0.05,
+    "02":  0.025,
+    "01":  0.01
+);

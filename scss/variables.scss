@@ -1,0 +1,24 @@
+// taken from elementary.io, a great linux distro
+// https://elementary.io/docs/human-interface-guidelines#color
+$colors:
+(
+    "black": #000000,
+    "white": #ffffff,
+    "brown": #715344,
+    "blue": #3689e6,
+    "purple": #a56de2,
+    "red": #c6262e,
+    "pink": #de3e80,
+    "orange": #f37329,
+    "yellow": #f9c440,
+    "green": #68b723,
+);
+// Responsive breakpoints scale with the viewers chosen text size
+$breakpoints:
+(
+    "xs": 30rem,
+    "sm": 40rem,
+    "md": 50rem,
+    "lg": 60rem,
+    "xl": 80rem
+);

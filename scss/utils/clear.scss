@@ -1,0 +1,49 @@
+// Clear
+
+.cl-l {
+	clear: left;
+}
+
+.cl-r {
+	clear: right;
+}
+
+.cl-b {
+	clear: both;
+}
+
+.cl-n {
+	clear: none;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:cl-l {
+			clear: left;
+		}
+
+		.#{$sel}\:cl-r {
+			clear: right;
+		}
+
+		.#{$sel}\:cl-b {
+			clear: both;
+		}
+
+		.#{$sel}\:cl-n {
+			clear: none;
+		}
+	}
+}
+
+.cf {
+	*zoom:1;
+}
+
+@each $sel, $size in $breakpoints {
+	@media(min-width: #{$size}) {
+		.#{$sel}\:cf {
+			*zoom:1;
+		}
+	}
+}
